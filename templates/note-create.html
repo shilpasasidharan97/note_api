@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Note</title>
+  <link rel="stylesheet" href="{% static 'css/create-page.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Create Note</h2>
+    <form id="myForm">
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="Head">Head</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="Body">Body</label>
+        <input type="text" id="body" name="body" required>
+      </div>
+      <button type="submit" class="submit-btn">Create</button>
+    </form>
+  </div>
+
+    <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- costome js file -->
+  <script src="{% static 'js/create.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Note</title>
+  <link rel="stylesheet" href="{% static 'css/view-page.css' %}">
+</head>
+<body>
+  <input type="number" value="{{id}}" id="pk" hidden>
+  <div class="note">
+    <h2 id="head"></h2>
+    <p id="body"></p>
+  </div>
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- costome js file -->
+  <script src="{% static 'js/view.js' %}"></script>
+
+</body>
+</html>

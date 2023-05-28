@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Notes</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+  <section class="welcome-section">
+    <div class="container">
+      <h1 class="welcome-heading">Welcome to GI Notes</h1>
+      <p class="welcome-description">Here you can list,create,update or delete Notes</p>
+    </div>
+  </section>
+
+  <!-- Page Routers -->
+  <div class="container mt-4">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" >List Notes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="note-create/" >Create New One</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-6">
+        <table id="myTable" class="mytable">
+            <thead>
+              <tr>
+                <th>Note</th>
+                <th>Content</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be dynamically appended here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- sweet alert cdn -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- costome js file -->
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Note</title>
+  <link rel="stylesheet" href="{% static 'css/edit-page.css' %}">
+</head>
+<body>
+  <input type="number" value="{{id}}" id="pk" hidden>
+  <div class="note">
+      <form class="edit-form" method="PUT" action="/api/v1/notes/{{note.id}}/">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{note.title}}">
+      
+        <label for="content">Content:</label>
+        <input id="body" name="body" value="{{note.body}}">
+      
+        <button type="submit" class="submit-btn">Edit</button>
+      </form>
+  </div>
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- costome js file -->
+  <script src="{% static 'js/edit.js' %}"></script>
+  
+
+</body>
+</html>
